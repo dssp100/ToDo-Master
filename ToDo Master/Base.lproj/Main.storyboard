@@ -215,7 +215,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="CreateAccountButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pr1-yv-pdL"/>
+                                    <action selector="SignMeUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JFN-WY-uTA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubi-Ex-ebf">
@@ -252,14 +252,6 @@
                                 </constraints>
                                 <state key="normal" image="XIcon"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wbn-5J-uZk">
-                                <rect key="frame" x="163" y="557" width="42" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Log in"/>
-                                <connections>
-                                    <action selector="SignMeInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GmW-EP-u27"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ToDo Master" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bw7-SN-Ab2">
                                 <rect key="frame" x="12.5" y="28" width="350" height="51"/>
                                 <constraints>
@@ -295,6 +287,7 @@
                     <connections>
                         <outlet property="PasswordField" destination="UjV-VC-f72" id="5JQ-bQ-XWZ"/>
                         <outlet property="UserEmailField" destination="Tls-A9-jdH" id="cNN-2K-u38"/>
+                        <segue destination="cfC-Kz-eFc" kind="show" identifier="UserCreated" id="dQv-jv-V6M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -310,4 +303,7 @@
         <image name="WelcomeScreenIcon" width="128" height="128"/>
         <image name="XIcon" width="128" height="128"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="dQv-jv-V6M"/>
+    </inferredMetricsTieBreakers>
 </document>
