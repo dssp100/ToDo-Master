@@ -11,6 +11,7 @@ import Firebase
 
 class LogInVC: UIViewController {
 
+    @IBOutlet weak var LogInError: UIImageView!
     @IBOutlet weak var UserEmailField: UITextField!
     
     @IBOutlet weak var UserPaswordField: UITextField!
@@ -32,6 +33,7 @@ class LogInVC: UIViewController {
                 user, error in
                 
                 if error != nil{
+                    self.LogInError.isHidden = false
                     print("Incorrect credentials")
                     
                 }

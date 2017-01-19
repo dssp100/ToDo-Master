@@ -128,10 +128,10 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hz8-rW-Tnb">
-                                <rect key="frame" x="16" y="481" width="343" height="120"/>
+                                <rect key="frame" x="84" y="537" width="206" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="44i-cS-8jC"/>
-                                    <constraint firstAttribute="height" constant="120" id="iFr-a4-tKF"/>
+                                    <constraint firstAttribute="width" constant="206" id="JzY-4E-k4Q"/>
+                                    <constraint firstAttribute="height" constant="64" id="wRk-tg-DOg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="41"/>
                                 <state key="normal" title="Log me in !">
@@ -148,15 +148,24 @@
                                     <constraint firstAttribute="height" constant="200" id="vqd-Xd-Hou"/>
                                 </constraints>
                             </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ExclamationMarkIcon" translatesAutoresizingMaskIntoConstraints="NO" id="NuB-Td-4Bd">
+                                <rect key="frame" x="161" y="479" width="52" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="Xpr-B8-GvB"/>
+                                    <constraint firstAttribute="height" constant="50" id="beR-Yv-WJ1"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hz8-rW-Tnb" firstAttribute="top" secondItem="J9H-4f-Pq3" secondAttribute="bottom" constant="13" id="2Rt-8a-uPP"/>
                             <constraint firstItem="J9H-4f-Pq3" firstAttribute="centerX" secondItem="jtP-k7-jSi" secondAttribute="centerX" id="2oO-Fa-SJT"/>
                             <constraint firstItem="eyG-Kf-dm6" firstAttribute="centerX" secondItem="jtP-k7-jSi" secondAttribute="centerX" id="3Vj-XK-scd"/>
+                            <constraint firstItem="hz8-rW-Tnb" firstAttribute="top" secondItem="NuB-Td-4Bd" secondAttribute="bottom" constant="8" id="DQl-iy-0F5"/>
                             <constraint firstItem="hz8-rW-Tnb" firstAttribute="centerX" secondItem="jtP-k7-jSi" secondAttribute="centerX" id="Pcr-7E-OM9"/>
                             <constraint firstItem="tzA-D9-LO6" firstAttribute="centerX" secondItem="jtP-k7-jSi" secondAttribute="centerX" id="QIr-wO-zLC"/>
+                            <constraint firstItem="NuB-Td-4Bd" firstAttribute="centerX" secondItem="jtP-k7-jSi" secondAttribute="centerX" id="QvW-au-fYr"/>
                             <constraint firstItem="eyG-Kf-dm6" firstAttribute="top" secondItem="tzA-D9-LO6" secondAttribute="bottom" constant="49" id="j59-WO-qZB"/>
+                            <constraint firstItem="NuB-Td-4Bd" firstAttribute="top" secondItem="J9H-4f-Pq3" secondAttribute="bottom" constant="11" id="kwb-1P-rTq"/>
                             <constraint firstItem="aG2-mi-E3E" firstAttribute="centerX" secondItem="jtP-k7-jSi" secondAttribute="centerX" id="okc-Hl-NhO"/>
                             <constraint firstItem="aG2-mi-E3E" firstAttribute="top" secondItem="978-6a-dOB" secondAttribute="bottom" constant="8" id="sNy-e7-Qxn"/>
                             <constraint firstItem="J9H-4f-Pq3" firstAttribute="top" secondItem="eyG-Kf-dm6" secondAttribute="bottom" constant="32" id="vvS-0l-2Sw"/>
@@ -164,13 +173,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="LogInError" destination="NuB-Td-4Bd" id="2jW-FO-2Ag"/>
                         <outlet property="UserEmailField" destination="eyG-Kf-dm6" id="i13-xN-ASD"/>
                         <outlet property="UserPaswordField" destination="J9H-4f-Pq3" id="EK4-mV-MZS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6cT-BM-UkP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-313" y="442"/>
+            <point key="canvasLocation" x="-314.39999999999998" y="441.22938530734638"/>
         </scene>
         <!--SignInVC-->
         <scene sceneID="tne-QT-ifu">
@@ -297,6 +307,7 @@
     </scenes>
     <resources>
         <image name="ArrowLeftIconGreen copy" width="128" height="128"/>
+        <image name="ExclamationMarkIcon" width="256" height="256"/>
         <image name="LoginIcon" width="128" height="128"/>
         <image name="PlussIcon" width="128" height="128"/>
         <image name="UserIcon" width="128" height="128"/>
