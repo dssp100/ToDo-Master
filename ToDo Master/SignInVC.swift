@@ -11,58 +11,70 @@ import Firebase
 
 class SignInVC: UIViewController {
 
+    //Variables
+    let databaseRef = FIRDatabase.database().reference(fromURL:"https://todo-master-c5574.firebaseio.com/")
     
+    //Outlets
     
+    @IBOutlet weak var UserNameField: UITextField!
     @IBOutlet weak var UserEmailField: UITextField!
-    
     @IBOutlet weak var PasswordField: UITextField!
-    
-    @IBAction func GoBackButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
+    @IBOutlet weak var ConfirmPasswordField: UITextField!
+    @IBOutlet weak var SignInError: UIImageView!
+    @IBOutlet weak var SignInSuccess: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
     
-        
+    //Actions
+    @IBAction func GoBackButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
-
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func SignMeUpButton(_ sender: AnyObject) {
+        signup()
     }
-
-    @IBAction func SignMeUpButton(_ sender: Any) {
+    
+    //Functions
+    func signup(){
+        guard let UserNameField = UserNameField.text else{
+            print("UserNameField Issue")
+            return
+        }
+        guard let UserEmailField = UserEmailField.text else{
+            print("UserEmail issue")
+            return
+        }
+        guard let PasswordField = PasswordField.text else{
+            print("PasswordField issue")
+            return
+        }
         
-        FIRAuth.auth()?.createUser(withEmail: UserEmailField.text!, password: PasswordField.text!, completion: { user, error in
-            
+        FIRAuth.auth()?.createUser(withEmail: UserEmailField, password: PasswordField, completion: { user, error in
             if error != nil {
-            print("Create user failed")
-            //self.login()
-                
+                self.SignInError.isHidden = false
+                print("Create user failed")
             }
             else {
+                self.SignInSuccess.isHidden = false
                 print("User Created")
-                self.performSegue(withIdentifier: "UserCreated", sender: self)
-            }
-        
-        })
-        
-    }
-    func login() {
-        FIRAuth.auth()?.signIn(withEmail: UserEmailField.text!, password: PasswordField.text!, completion: {
-            user, error in
-            
-            if error != nil{
-                print("Incorrect credentials")
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
+                    self.performSegue(withIdentifier: "User Created", sender: self)
+                })
                 
             }
-            else {
-                print("User logged in")
+            guard let uid = user?.uid else{
+               return
             }
+            let userReference = self.databaseRef.child("user").child(uid)
+            let values = ["username": UserNameField, "email": UserEmailField, "pic":"!"]
+            userReference.updateChildValues(values, withCompletionBlock: { (error, ref) in
+                if error != nil{
+                    print("error")
+                    return
+                }
+            })
         })
     }
 }
-

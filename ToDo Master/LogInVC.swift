@@ -11,10 +11,10 @@ import Firebase
 
 class LogInVC: UIViewController {
 
-    @IBOutlet weak var LogInError: UIImageView!
     @IBOutlet weak var UserEmailField: UITextField!
-    
     @IBOutlet weak var UserPaswordField: UITextField!
+    @IBOutlet weak var LogInError: UIImageView!
+    @IBOutlet weak var LogInSuccess: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +38,7 @@ class LogInVC: UIViewController {
                     
                 }
                 else {
-                    
+                    self.LogInSuccess.isHidden = false
                     print("User logged in")
                 }
             })
