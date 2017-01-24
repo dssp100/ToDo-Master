@@ -37,7 +37,7 @@ class SignInVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     @IBAction func CheckButton(_ sender: Any) {
-        self.comparePasswords()
+        comparePasswords()
     }
     @IBAction func SignMeUpButton(_ sender: AnyObject) {
         signup()
@@ -80,10 +80,11 @@ class SignInVC: UIViewController {
                return
             }
             let userReference = self.databaseRef.child("user").child(uid)
-            let values = ["username": UserNameField, "email": UserEmailField, "pic":"!"]
+            let values = ["username": UserNameField, "email": UserEmailField, "pic":""]
+            
             userReference.updateChildValues(values, withCompletionBlock: { (error, ref) in
                 if error != nil{
-                    print("error")
+                    print(error!)
                     return
                 }
             })
@@ -103,7 +104,7 @@ class SignInVC: UIViewController {
 }
     func logout() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let LogInVC = storyboard.instantiateViewController(withIdentifier: "Login")
+        let LogInVC = storyboard.instantiateViewController(withIdentifier: "Profile")
         present(LogInVC, animated: true, completion: nil)
     }
 }

@@ -12,8 +12,15 @@ import Firebase
 class WelcomeVC: UIViewController {
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-
-
+        if FIRAuth.auth()?.currentUser?.uid != nil{
+            login()
         }
+}
+func login(){
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let ProfileVC = storyboard.instantiateViewController(withIdentifier: "Profile")
+    present(ProfileVC, animated: true, completion: nil)
+}
 }

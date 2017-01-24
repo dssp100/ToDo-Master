@@ -50,6 +50,7 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
 
     
     //Functions
+    
     func setupProfile(){
         UserProfileImage.layer.cornerRadius = UserProfileImage.frame.size.width/2
         UserProfileImage.clipsToBounds = true
@@ -78,7 +79,7 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     }
     func logout(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let loginViewController = storyboard.instantiateViewController(withIdentifier: "login")
+        let loginViewController = storyboard.instantiateViewController(withIdentifier: "Profile")
         present(loginViewController, animated: true, completion: nil)
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -119,7 +120,7 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
                     if let urlText = url?.absoluteString{
                         self.databaseRef.child("users").child((FIRAuth.auth()?.currentUser?.uid)!).updateChildValues(["pic" : urlText], withCompletionBlock: { (error, ref) in
                             if error != nil{
-                                print(error!)
+                                print("error!")
                                 return
                             }
                         })                    }
@@ -127,4 +128,5 @@ class ProfileVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
             })
         }
     }
+    
 }
