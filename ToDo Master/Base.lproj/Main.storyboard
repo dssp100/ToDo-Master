@@ -21,22 +21,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to ToDo Master" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3JW-r0-ZZ7">
-                                <rect key="frame" x="16" y="28" width="343" height="165"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="Voi-Gu-2gG"/>
-                                    <constraint firstAttribute="height" constant="165" id="t7Z-Mn-m7f"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to ToDo Master" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3JW-r0-ZZ7">
+                                <rect key="frame" x="16" y="28" width="343" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="54"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbf-MG-5ho">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbf-MG-5ho">
                                 <rect key="frame" x="16" y="437" width="343" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="mst-TT-LZC"/>
-                                    <constraint firstAttribute="height" constant="30" id="xGR-RR-ae5"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="28"/>
                                 <state key="normal" title="I'm new let's get started">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -45,19 +39,9 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="HAC-97-hLB"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WelcomeScreenIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Gog-jz-3mj">
-                                <rect key="frame" x="97" y="228" width="181" height="132"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="181" id="ACN-H4-rrJ"/>
-                                    <constraint firstAttribute="height" constant="132" id="Oyr-NY-2Sc"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4a-Mh-pls">
-                                <rect key="frame" x="16" y="529" width="343" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="lJw-Xf-nzm"/>
-                                    <constraint firstAttribute="height" constant="30" id="oCu-C9-dHQ"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4a-Mh-pls">
+                                <rect key="frame" x="55" y="529" width="265" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="28"/>
                                 <state key="normal" title="I already have a login">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -66,19 +50,12 @@
                                     <segue destination="cfC-Kz-eFc" kind="show" id="ud7-hp-mDX"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WelcomeScreenIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Gog-jz-3mj">
+                                <rect key="frame" x="123" y="229" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="gbf-MG-5ho" firstAttribute="centerX" secondItem="yuK-WX-jf6" secondAttribute="centerX" id="HRH-lC-Hku"/>
-                            <constraint firstItem="Onl-w2-37d" firstAttribute="top" secondItem="F4a-Mh-pls" secondAttribute="bottom" constant="108" id="PBf-HY-41B"/>
-                            <constraint firstItem="F4a-Mh-pls" firstAttribute="centerX" secondItem="yuK-WX-jf6" secondAttribute="centerX" id="arr-bP-nYN"/>
-                            <constraint firstItem="gbf-MG-5ho" firstAttribute="top" secondItem="Gog-jz-3mj" secondAttribute="bottom" constant="77" id="bdq-bo-hpo"/>
-                            <constraint firstItem="Gog-jz-3mj" firstAttribute="top" secondItem="3JW-r0-ZZ7" secondAttribute="bottom" constant="35" id="fmO-6c-Dm6"/>
-                            <constraint firstItem="Gog-jz-3mj" firstAttribute="centerX" secondItem="yuK-WX-jf6" secondAttribute="centerX" id="jTg-Ic-Gsj"/>
-                            <constraint firstItem="3JW-r0-ZZ7" firstAttribute="top" secondItem="crW-Q8-Iuo" secondAttribute="bottom" constant="8" id="so5-rS-1Sh"/>
-                            <constraint firstItem="3JW-r0-ZZ7" firstAttribute="centerX" secondItem="yuK-WX-jf6" secondAttribute="centerX" id="uzg-Ug-MiJ"/>
-                            <constraint firstItem="F4a-Mh-pls" firstAttribute="top" secondItem="gbf-MG-5ho" secondAttribute="bottom" constant="62" id="yYo-mt-qmN"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ig2-u1-vdO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -88,7 +65,7 @@
         <!--LogInVC-->
         <scene sceneID="00S-67-iSW">
             <objects>
-                <viewController id="cfC-Kz-eFc" userLabel="LogInVC" customClass="LogInVC" customModule="ToDo_Master" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" id="cfC-Kz-eFc" userLabel="LogInVC" customClass="LogInVC" customModule="ToDo_Master" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="978-6a-dOB"/>
                         <viewControllerLayoutGuide type="bottom" id="afA-d7-zvV"/>
@@ -97,85 +74,145 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ToDo Master" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aG2-mi-E3E">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ToDo Master" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aG2-mi-E3E">
                                 <rect key="frame" x="12" y="28" width="350" height="51"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="51" id="0Ww-aK-TGB"/>
-                                    <constraint firstAttribute="width" constant="350" id="7NZ-nc-JfH"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="54"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eyG-Kf-dm6" userLabel="UserEmailField">
-                                <rect key="frame" x="16" y="376" width="343" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="ELH-Bn-st2"/>
-                                    <constraint firstAttribute="width" constant="343" id="EzQ-sp-pQi"/>
-                                </constraints>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eyG-Kf-dm6" userLabel="UserEmailField">
+                                <rect key="frame" x="16" y="393" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J9H-4f-Pq3">
-                                <rect key="frame" x="16" y="438" width="343" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="6An-Vr-5P1"/>
-                                    <constraint firstAttribute="width" constant="343" id="fAr-Ht-CZ7"/>
-                                </constraints>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J9H-4f-Pq3">
+                                <rect key="frame" x="16" y="455" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LoginIcon" translatesAutoresizingMaskIntoConstraints="NO" id="tzA-D9-LO6">
+                                <rect key="frame" x="87" y="144" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ExclamationMarkIcon" translatesAutoresizingMaskIntoConstraints="NO" id="NuB-Td-4Bd">
+                                <rect key="frame" x="167" y="590" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OkIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Z6k-gm-7Pb">
+                                <rect key="frame" x="174" y="590" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hz8-rW-Tnb">
-                                <rect key="frame" x="84" y="493" width="206" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="96" y="518" width="183" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="41"/>
-                                <state key="normal" title="Log me in !">
+                                <state key="normal" title="Log me in">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="LogMeInButton:" destination="cfC-Kz-eFc" eventType="touchUpInside" id="iSz-m4-7NL"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginIcon" translatesAutoresizingMaskIntoConstraints="NO" id="tzA-D9-LO6">
-                                <rect key="frame" x="87" y="127" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="foD-gJ-3eT"/>
-                                    <constraint firstAttribute="height" constant="200" id="vqd-Xd-Hou"/>
-                                </constraints>
-                            </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ExclamationMarkIcon" translatesAutoresizingMaskIntoConstraints="NO" id="NuB-Td-4Bd">
-                                <rect key="frame" x="167" y="577" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OkIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Z6k-gm-7Pb">
-                                <rect key="frame" x="174" y="577" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="J9H-4f-Pq3" firstAttribute="centerX" secondItem="jtP-k7-jSi" secondAttribute="centerX" id="2oO-Fa-SJT"/>
-                            <constraint firstItem="eyG-Kf-dm6" firstAttribute="centerX" secondItem="jtP-k7-jSi" secondAttribute="centerX" id="3Vj-XK-scd"/>
-                            <constraint firstItem="tzA-D9-LO6" firstAttribute="centerX" secondItem="jtP-k7-jSi" secondAttribute="centerX" id="QIr-wO-zLC"/>
-                            <constraint firstItem="eyG-Kf-dm6" firstAttribute="top" secondItem="tzA-D9-LO6" secondAttribute="bottom" constant="49" id="j59-WO-qZB"/>
-                            <constraint firstItem="aG2-mi-E3E" firstAttribute="centerX" secondItem="jtP-k7-jSi" secondAttribute="centerX" id="okc-Hl-NhO"/>
-                            <constraint firstItem="aG2-mi-E3E" firstAttribute="top" secondItem="978-6a-dOB" secondAttribute="bottom" constant="8" id="sNy-e7-Qxn"/>
-                            <constraint firstItem="J9H-4f-Pq3" firstAttribute="top" secondItem="eyG-Kf-dm6" secondAttribute="bottom" constant="32" id="vvS-0l-2Sw"/>
-                            <constraint firstItem="tzA-D9-LO6" firstAttribute="top" secondItem="aG2-mi-E3E" secondAttribute="bottom" constant="48" id="wMd-nD-OdH"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="LogInError" destination="NuB-Td-4Bd" id="2jW-FO-2Ag"/>
                         <outlet property="LogInSuccess" destination="Z6k-gm-7Pb" id="5KP-Co-MKr"/>
                         <outlet property="UserEmailField" destination="eyG-Kf-dm6" id="i13-xN-ASD"/>
                         <outlet property="UserPaswordField" destination="J9H-4f-Pq3" id="EK4-mV-MZS"/>
+                        <segue destination="c3J-5G-F9N" kind="show" identifier="ImportPhoto" id="QbN-27-fma"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6cT-BM-UkP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-314.39999999999998" y="441.22938530734638"/>
+            <point key="canvasLocation" x="-314" y="440"/>
+        </scene>
+        <!--ProfileVC-->
+        <scene sceneID="mDP-GO-7ZN">
+            <objects>
+                <viewController id="c3J-5G-F9N" userLabel="ProfileVC" customClass="ProfileVC" customModule="ToDo_Master" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RLq-85-b17"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZV5-o6-aKO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Jk-RV-yYu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="imageName" image="UserIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ymy-Sb-gkv">
+                                <rect key="frame" x="87" y="48" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="imageName">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Cy-p6-deG">
+                                <rect key="frame" x="309" y="246" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="PlussIcon"/>
+                                <connections>
+                                    <action selector="AddImageButton:" destination="c3J-5G-F9N" eventType="touchUpInside" id="K3Y-V3-bzY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose a photo or a picute as your favorite avatar and click next." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doR-DH-4IS">
+                                <rect key="frame" x="16" y="381" width="343" height="153"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uoc-2d-dvS">
+                                <rect key="frame" x="132" y="509" width="82" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="41"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="LogMeInButton:" destination="cfC-Kz-eFc" eventType="touchUpInside" id="s05-XP-jYd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="username" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ebk-yf-EWr">
+                                <rect key="frame" x="16" y="327" width="343" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="username"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4a-Z3-rwi" userLabel="Log">
+                                <rect key="frame" x="16" y="20" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="LogoutIcon"/>
+                                <connections>
+                                    <action selector="SignOutButton:" destination="c3J-5G-F9N" eventType="touchUpInside" id="FTz-E6-TSO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPJ-zI-8rr">
+                                <rect key="frame" x="16" y="269" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="SaveIcon"/>
+                                <connections>
+                                    <action selector="SaveChangesButton:" destination="c3J-5G-F9N" eventType="touchUpInside" id="CYs-aT-u1q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="UserNameLabel" destination="Ebk-yf-EWr" id="Xok-Qa-bbU"/>
+                        <outlet property="UserProfileImage" destination="ymy-Sb-gkv" id="uVt-c2-F1j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HJc-jH-Vg5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="492" y="440.32983508245883"/>
         </scene>
         <!--SignInVC-->
         <scene sceneID="tne-QT-ifu">
@@ -189,90 +226,96 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ToDo Master" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bw7-SN-Ab2">
+                                <rect key="frame" x="12" y="28" width="350" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="54"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dNe-ne-gph" userLabel="UserNameField">
+                                <rect key="frame" x="16" y="270" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tls-A9-jdH" userLabel="UserEmailField">
-                                <rect key="frame" x="16" y="375" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="16" y="313" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dNe-ne-gph" userLabel="UserEmailField">
-                                <rect key="frame" x="16" y="332" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UjV-VC-f72">
-                                <rect key="frame" x="16" y="461" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Ow-gC-pKh" userLabel="PasswordField">
+                                <rect key="frame" x="16" y="356" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Ow-gC-pKh">
-                                <rect key="frame" x="16" y="418" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UjV-VC-f72" userLabel="ConfirmPasswordField">
+                                <rect key="frame" x="16" y="399" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9l-Ru-ss0">
-                                <rect key="frame" x="16" y="502" width="343" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzK-jD-Ok3" userLabel="CheckButton">
+                                <rect key="frame" x="16" y="463" width="343" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="41"/>
-                                <state key="normal" title="Sign me up !">
+                                <state key="normal" title="Check">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="CheckButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sox-Jv-OLK"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9l-Ru-ss0" userLabel="SignMeUpButton">
+                                <rect key="frame" x="16" y="463" width="343" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="41"/>
+                                <state key="normal" title="Sign me up">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="SignMeUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JFN-WY-uTA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubi-Ex-ebf">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubi-Ex-ebf" userLabel="GoBack">
                                 <rect key="frame" x="167" y="619" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                                 <state key="normal" image="ArrowLeftIconGreen copy"/>
                                 <connections>
                                     <action selector="GoBackButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vpy-wH-8Nj"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="UserIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ymy-Sb-gkv">
-                                <rect key="frame" x="87" y="101" width="200" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ExclamationMarkIcon" translatesAutoresizingMaskIntoConstraints="NO" id="8fQ-JG-tuz" userLabel="SignInError">
+                                <rect key="frame" x="167" y="528" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Cy-p6-deG">
-                                <rect key="frame" x="309" y="233" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="PlussIcon"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjR-Mo-84L">
-                                <rect key="frame" x="16" y="233" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="XIcon"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ToDo Master" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bw7-SN-Ab2">
-                                <rect key="frame" x="12.5" y="28" width="350" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="54"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OkIcon" translatesAutoresizingMaskIntoConstraints="NO" id="6aY-Hb-2ko" userLabel="SignInSuccess">
+                                <rect key="frame" x="173" y="528" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OK, So let's first sign you up then, so we can identify you. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TN0-PH-G9W">
+                                <rect key="frame" x="30" y="97" width="315" height="153"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OkIcon" translatesAutoresizingMaskIntoConstraints="NO" id="6aY-Hb-2ko">
-                                <rect key="frame" x="173" y="567" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ExclamationMarkIcon" translatesAutoresizingMaskIntoConstraints="NO" id="8fQ-JG-tuz">
-                                <rect key="frame" x="167" y="567" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="CheckButton" destination="bzK-jD-Ok3" id="ngN-zh-BgK"/>
                         <outlet property="ConfirmPasswordField" destination="UjV-VC-f72" id="Mv0-53-ORA"/>
                         <outlet property="PasswordField" destination="9Ow-gC-pKh" id="acj-ku-r0N"/>
                         <outlet property="SignInError" destination="8fQ-JG-tuz" id="dAM-t9-QXR"/>
                         <outlet property="SignInSuccess" destination="6aY-Hb-2ko" id="E6n-cJ-hAa"/>
+                        <outlet property="SignMeUpButton" destination="c9l-Ru-ss0" id="v84-jA-AQW"/>
                         <outlet property="UserEmailField" destination="Tls-A9-jdH" id="cNN-2K-u38"/>
                         <outlet property="UserNameField" destination="dNe-ne-gph" id="Piq-T8-Oeg"/>
                         <segue destination="cfC-Kz-eFc" kind="show" identifier="User Created" id="dQv-jv-V6M"/>
@@ -287,13 +330,14 @@
         <image name="ArrowLeftIconGreen copy" width="128" height="128"/>
         <image name="ExclamationMarkIcon" width="256" height="256"/>
         <image name="LoginIcon" width="128" height="128"/>
+        <image name="LogoutIcon" width="256" height="256"/>
         <image name="OkIcon" width="128" height="128"/>
         <image name="PlussIcon" width="128" height="128"/>
+        <image name="SaveIcon" width="128" height="128"/>
         <image name="UserIcon" width="128" height="128"/>
         <image name="WelcomeScreenIcon" width="128" height="128"/>
-        <image name="XIcon" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dQv-jv-V6M"/>
+        <segue reference="ud7-hp-mDX"/>
     </inferredMetricsTieBreakers>
 </document>

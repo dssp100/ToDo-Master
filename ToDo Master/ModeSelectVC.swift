@@ -1,19 +1,21 @@
 //
-//  WelcomeVC.swift
+//  ModeSelectVC.swift
 //  ToDo Master
 //
-//  Created by Daniel Springer on 19/01/2017.
+//  Created by Daniel Springer on 20/01/2017.
 //  Copyright © 2017 Daniel Springer. All rights reserved.
 //
 
 import UIKit
-import Firebase
 
-class WelcomeVC: UIViewController {
+class ModeSelectVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
 
-        }
-}
+    }
+
+
+

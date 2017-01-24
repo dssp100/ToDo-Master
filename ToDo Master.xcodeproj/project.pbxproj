@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		24C7ED1E6486366F4313B873 /* Pods_ToDo_Master.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34408889A54981B5EF815EAB /* Pods_ToDo_Master.framework */; };
+		8E0A368F1E34AF2700E33255 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A368E1E34AF2700E33255 /* ProfileVC.swift */; };
 		8EA1D9DB1E303D2200A6723A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1D9DA1E303D2200A6723A /* AppDelegate.swift */; };
 		8EA1D9DD1E303D2200A6723A /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1D9DC1E303D2200A6723A /* SignInVC.swift */; };
 		8EA1D9E01E303D2200A6723A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA1D9DE1E303D2200A6723A /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		34408889A54981B5EF815EAB /* Pods_ToDo_Master.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDo_Master.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D60820BEDCC446F53E416A1 /* Pods-ToDo Master.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo Master.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToDo Master/Pods-ToDo Master.debug.xcconfig"; sourceTree = "<group>"; };
+		8E0A368E1E34AF2700E33255 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		8EA1D9D71E303D2200A6723A /* ToDo Master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToDo Master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EA1D9DA1E303D2200A6723A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EA1D9DC1E303D2200A6723A /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				8EA1DA0D1E30BCCE00A6723A /* WelcomeVC.swift */,
 				8EA1D9DC1E303D2200A6723A /* SignInVC.swift */,
 				8EA1DA0F1E30D6DC00A6723A /* LogInVC.swift */,
+				8E0A368E1E34AF2700E33255 /* ProfileVC.swift */,
 				8EA1D9DE1E303D2200A6723A /* Main.storyboard */,
 				8EA1D9E41E303D2200A6723A /* Assets.xcassets */,
 				8EA1D9E61E303D2200A6723A /* LaunchScreen.storyboard */,
@@ -350,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E0A368F1E34AF2700E33255 /* ProfileVC.swift in Sources */,
 				8EA1D9DD1E303D2200A6723A /* SignInVC.swift in Sources */,
 				8EA1D9E31E303D2200A6723A /* ToDo_Master.xcdatamodeld in Sources */,
 				8EA1D9DB1E303D2200A6723A /* AppDelegate.swift in Sources */,

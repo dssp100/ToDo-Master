@@ -20,23 +20,31 @@ class SignInVC: UIViewController {
     @IBOutlet weak var UserEmailField: UITextField!
     @IBOutlet weak var PasswordField: UITextField!
     @IBOutlet weak var ConfirmPasswordField: UITextField!
+    @IBOutlet weak var CheckButton: UIButton!
+    @IBOutlet weak var SignMeUpButton: UIButton!
     @IBOutlet weak var SignInError: UIImageView!
     @IBOutlet weak var SignInSuccess: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if FIRAuth.auth()?.currentUser?.uid == nil{
+            logout()
+        }
     }
     
     //Actions
     @IBAction func GoBackButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    @IBAction func CheckButton(_ sender: Any) {
+        self.comparePasswords()
+    }
     @IBAction func SignMeUpButton(_ sender: AnyObject) {
         signup()
     }
     
     //Functions
+    
     func signup(){
         guard let UserNameField = UserNameField.text else{
             print("UserNameField Issue")
@@ -50,6 +58,10 @@ class SignInVC: UIViewController {
             print("PasswordField issue")
             return
         }
+        guard ConfirmPasswordField.text != nil else{
+            print("ConfirmPasswordField issue")
+            return
+        }
         
         FIRAuth.auth()?.createUser(withEmail: UserEmailField, password: PasswordField, completion: { user, error in
             if error != nil {
@@ -59,7 +71,7 @@ class SignInVC: UIViewController {
             else {
                 self.SignInSuccess.isHidden = false
                 print("User Created")
-                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
                     self.performSegue(withIdentifier: "User Created", sender: self)
                 })
                 
@@ -76,5 +88,22 @@ class SignInVC: UIViewController {
                 }
             })
         })
+    }
+    func comparePasswords() {
+        guard let password = PasswordField.text,
+            let confirmPassword = ConfirmPasswordField.text
+            else {
+                print("field errors")
+                return
+        }
+        if password == confirmPassword {
+            self.SignMeUpButton.isHidden = false
+            self.CheckButton.isHidden = true
+        }
+}
+    func logout() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let LogInVC = storyboard.instantiateViewController(withIdentifier: "Login")
+        present(LogInVC, animated: true, completion: nil)
     }
 }
